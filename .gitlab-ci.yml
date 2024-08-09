@@ -1,0 +1,44 @@
+variables:
+  GIT_STRATEGY: none
+
+stages:
+  - "deploy"
+  - "build_dependencies"
+  - "database_migration"
+  - "database_seed"
+
+deploy:
+  stage: deploy
+  tags:
+    - someah
+  only:
+    - main
+  script:
+    - cd /home/someah/presensi-someah
+    - git pull origin main
+
+build-dependencies:
+  stage: build_dependencies
+  tags:
+    - someah
+  only:
+    changes:
+      - composer.{json,lock}
+    refs:
+      - main
+  script:
+    - cd /home/someah/presensi-someah
+    - /bin/php8.1 artisan migrate
+
+migration:
+  stage: database_migration
+  tags:
+    - someah
+  only:
+    changes:
+      - "database/migrations/*"
+    refs:
+      - main
+  script:
+    - cd /home/someah/presensi-someah
+    - /bin/php8.1 artisan migrate
