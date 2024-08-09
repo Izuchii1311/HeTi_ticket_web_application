@@ -21,7 +21,9 @@
                                 <img src="{{ asset($imageAuthor->profile_picture ? 'storage/images/users/'.$imageAuthor->profile_picture : 'assets/img/default_image.jpg') }}"
                                     class="rounded-circle me-3" width="50" height="50" alt="user-pict">
                                 <div>
-                                    <h5 class="card-title">{{ $ticket->name }} - {{ $ticket->subject }}</h5>
+                                    <h5 class="card-title">
+                                        {{-- {{ $ticket->name }} -  --}}
+                                        {{ $ticket->subject }}</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">{{ $ticket->created_at->diffForHumans() }} <br>
                                         Dibuat sejak: {{ $ticket->created_at }}</h6>
                                 </div>
@@ -229,7 +231,7 @@
                                         </div>
 
                                         {{-- Priority --}}
-                                        <div class="form-group my-2">
+                                        {{-- <div class="form-group my-2">
                                             <label for="priority">Prioritas Tiket</label>
                                             <select class="form-control" name="priority" id="priority">
                                                 <option value="">- Pilih -</option>
@@ -240,7 +242,7 @@
                                             @error("priority")
                                                 <div class="text-danger mt-2"><i>{{ $message }}</i></div>
                                             @enderror
-                                        </div>
+                                        </div> --}}
 
                                         <div class="d-flex justify-content-end">
                                             <button type="button" class="btn btn-dark me-2" id="btn-cancel" data-dismiss="modal">Reset</button>
@@ -254,7 +256,8 @@
                                 @endif
                             @endif
 
-                            @if ($user->role == "admin" || $user->role == "customer-service")
+                            @if (Auth::user()->role == "admin" || Auth::user()->role == "customer-service")
+                                {{-- @if(>role) --}}
                                 <div class="d-flex justify-content-end mt-2">
                                     <form action="{{ route("ticket.delete", $ticket->id) }}" method="POST" onsubmit="return confirm("Are you sure you want to delete this ticket?");">
                                         @csrf
@@ -404,11 +407,11 @@
             document.addEventListener('DOMContentLoaded', function() {
                 var cancelButton = document.querySelector('#btn-cancel');
                 var dropdownStatus = document.getElementById('update_status');
-                var dropdownPriority = document.getElementById('priority');
+                // var dropdownPriority = document.getElementById('priority');
 
-                console.log("Cancel Button:", cancelButton);
-                console.log("Dropdown Status:", dropdownStatus);
-                console.log("Dropdown Priority:", dropdownPriority);
+                // console.log("Cancel Button:", cancelButton);
+                // console.log("Dropdown Status:", dropdownStatus);
+                // console.log("Dropdown Priority:", dropdownPriority);
 
                 if (cancelButton) {
                     cancelButton.addEventListener('click', function() {

@@ -36,7 +36,7 @@
                                     </div>
 
                                     {{-- Name --}}
-                                    <div class="form-group my-2">
+                                    {{-- <div class="form-group my-2">
                                         <label>
                                             Nama<sup class="text-danger"><b>*</b></sup>
                                         </label>
@@ -44,7 +44,7 @@
                                         @error('name')
                                             <div class="text-danger mt-2"><i>{{ $message }}</i></div>
                                         @enderror
-                                    </div>
+                                    </div> --}}
 
                                     {{-- Type --}}
                                     <div class="form-group my-2">
@@ -69,17 +69,16 @@
 
                                     {{-- Team --}}
                                     <div class="form-group my-2">
-                                        <label>Tim</label>
+                                        <label>Tim<sup class="text-danger"><b>*</b></label>
                                         <select class="form-control select2-hidden-accessible" name="team" id="team"
                                             aria-hidden="true">
                                             <option value="">- Pilih -</option>
                                             @forelse ($employees as $employee)
-                                                <option value="{{ $employee->name }}">
-                                                    {{ $employee->name }}
-                                                    @if ($employee->is_active != true)
-                                                    <span class="text-danger"> - [Karyawan ini statusnya sedang tidak aktif]</span>
-                                                    @endif
-                                                </option>
+                                                @if ($employee->is_active == true)
+                                                    <option value="{{ $employee->name }}">
+                                                        {{ $employee->name }}
+                                                    </option>
+                                                @endif
                                             @empty
                                                 <option value="">Akun belum dibuat oleh admin</option>
                                             @endforelse
@@ -91,7 +90,7 @@
 
                                     {{-- Priority --}}
                                     <div class="form-group my-2">
-                                        <label>Prioritas Tiket</label>
+                                        <label>Prioritas Tiket<sup class="text-danger"><b>*</b></label>
                                         <select class="form-control select2-hidden-accessible" name="priority" id="priority"
                                             aria-hidden="true">
                                             <option value="">- Pilih -</option>

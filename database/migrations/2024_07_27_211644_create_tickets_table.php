@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('no_ticket')->nullable();
             $table->string('subject');
-            $table->string('name');
+            // $table->string('name');
             $table->string('type');
             $table->string('team');
             $table->string('priority')->default('LOW');

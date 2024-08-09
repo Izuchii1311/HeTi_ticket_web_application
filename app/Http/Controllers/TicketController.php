@@ -42,7 +42,7 @@ class TicketController extends Controller
         // Validasi data
         $validator = Validator::make($request->all(), [
             'subject' => 'required|string|max:50',
-            'name' => 'required|string|max:50',
+            // 'name' => 'required|string|max:50',
             'type' => 'required|string',
             'team' => 'required|string',
             'priority' => 'required|string',
@@ -125,7 +125,7 @@ class TicketController extends Controller
         // Validasi data
         $validator = Validator::make($request->all(), [
             'status' => 'nullable|string',
-            'priority' => 'nullable|string',
+            // 'priority' => 'nullable|string',
         ]);
 
         if ($validator->fails()) {
@@ -138,7 +138,7 @@ class TicketController extends Controller
 
         $ticket->update(array_filter([
             'status' => $validatedData['status'] ?? $ticket->status,
-            'priority' => $validatedData['priority'] ?? $ticket->priority,
+            // 'priority' => $validatedData['priority'] ?? $ticket->priority,
             'updated_at' => now()
         ]));
 

@@ -34,7 +34,7 @@
                                             <th>No</th>
                                             <th>Kode Tiket</th>
                                             <th>Subject</th>
-                                            <th>Name</th>
+                                            {{-- <th>Name</th> --}}
                                             <th>Type</th>
                                             <th>Team</th>
                                             <th>Priority</th>
@@ -49,7 +49,7 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $ticket->no_ticket }}</td>
                                                 <td>{{ $ticket->subject }}</td>
-                                                <td>{{ $ticket->name }}</td>
+                                                {{-- <td>{{ $ticket->name }}</td> --}}
                                                 <td>{{ $ticket->type }}</td>
                                                 <td>{{ $ticket->team }}</td>
                                                 <td>
@@ -70,7 +70,7 @@
                                             </tr>
                                         @empty
                                             <tr>
-                                                <td colspan="10" class="text-center">Belum ada tiket yang dibuat.</td>
+                                                <td colspan="9" class="text-center">Belum ada tiket yang dibuat.</td>
                                             </tr>
                                         @endforelse
                                     </tbody>
