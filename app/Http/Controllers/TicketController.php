@@ -104,8 +104,7 @@ class TicketController extends Controller
         $employeeEmail = User::where('id', $employee->user_id)->first();
         $templates = TemplateComment::all();
 
-        $imageAuthor = User::where('id', $employee->user_id)->first();
-        // dd($imageAuthor->profile_picture);
+        $imageAuthor = User::where('id', $ticket->user_id)->first();
 
         // Menggunakan nama variabel yang konsisten di tampilan
         return view('tiket.ticket', [
