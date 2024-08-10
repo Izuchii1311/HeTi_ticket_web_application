@@ -18,8 +18,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex align-items-center">
-                                <img src="{{ asset($imageAuthor->profile_picture ? 'storage/images/users/'.$imageAuthor->profile_picture : 'assets/img/default_image.jpg') }}"
-                                    class="rounded-circle me-3" width="50" height="50" alt="user-pict">
+                                <img src="{{ asset('storage/images/users/' . ($imageAuthor->profile_picture ?? 'assets/img/default_image.jpg')) }}" class="rounded-circle me-3" width="50" height="50" alt="user-pict">
                                 <div>
                                     <h5 class="card-title">
                                         {{-- {{ $ticket->name }} -  --}}

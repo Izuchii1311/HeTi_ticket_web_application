@@ -105,6 +105,7 @@ class TicketController extends Controller
         $templates = TemplateComment::all();
 
         $imageAuthor = User::where('id', $employee->user_id)->first();
+        // dd($imageAuthor->profile_picture);
 
         // Menggunakan nama variabel yang konsisten di tampilan
         return view('tiket.ticket', [
