@@ -14,7 +14,7 @@
             <li class="menu-item" role="menuitem">
                 <a class="menu-link collapse" data-toggle="collapse" role="button"
                     aria-expanded="true">
-                    <i class='bx bxs-user-detail'></i> Manajemen Karyawan
+                    <i class='bx bxs-user-detail'></i> Manajemen Users
                 </a>
                 <div class="collapse-menu collapse show" id="mnu_ticket">
                     <div class="collapse-content py-0">
@@ -28,7 +28,7 @@
                             <li>
                                 <a href="{{ url('dashboard/karyawan') }}" class="waves-effect">
                                     <i class="bx bx-user"></i>
-                                    <span key="t-dashboard">Karyawan</span>
+                                    <span key="t-dashboard">Users</span>
                                 </a>
                             </li>
                         </ul>

@@ -12,8 +12,8 @@
                 <div class="row">
                     <div class="col-7">
                         <div class="text-primary p-4">
-                            <h5 class="text-primary">Selamat Datang !</h5>
-                            <p>Di aplikasi HeTi👋</p>
+                            <h5 class="text-primary">LOGIN AREA</h5>
+                            <p>One more step to continue!</p>
                         </div>
                     </div>
                     {{-- Image background --}}

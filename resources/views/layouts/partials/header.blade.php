@@ -5,7 +5,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box pt-1 " >
                 <a href="index.html" class="logo logo-dark d-flex align-items-center ">
-                    <img src="{{ asset('assets/img/HeTi_Logo.png') }}" alt="" height="60" class="mr-2 ">
+                    <img src="{{ asset('assets/img/HeTi_Logo_2.png') }}" alt="" height="60" class="mr-2 ">
                     <h3 class="text-white mb-0 px-2"> Helpdesk<br>Ticketing</h3>
                 </a>
             </div>
