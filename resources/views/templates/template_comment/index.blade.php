@@ -7,8 +7,8 @@
 
                 <div class="main-header">
                     <div class="page-header">
-                        <h3 class="page-name">Daftar Tiket</h3>
-                        <p class="page-name">Kumpulan data tiket yang sudah dibuat</p>
+                        <h3 class="page-name">Daftar Template Balasan</h3>
+                        <p class="page-name">Kumpulan template balasan tiket yang sudah dibuat</p>
                     </div>
                 </div>
 

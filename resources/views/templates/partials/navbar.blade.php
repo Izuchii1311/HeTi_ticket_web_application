@@ -3,7 +3,7 @@
     <div class="d-flex">
         <div class="navbar-brand-box pt-5">
             <a href="{{ route('dashboard') }}" class="logo logo-dark d-flex align-items-center">
-                <img src="{{ asset('assets/img/HeTi_Logo.png') }}" alt=""
+                <img src="{{ asset('assets/img/HeTi_Logo_2.png') }}" alt="Logo"
                     height="60" class="mr-2">
                 <h3 class="text-white mb-0">HELPDESK TICKETING</h3>
             </a>

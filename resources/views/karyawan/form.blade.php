@@ -7,15 +7,15 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Tambah Karyawan Baru</h4>
-                            <p><i>Buat data akun karyawan baru.</i></p>
+                            <h4>Tambah User Baru</h4>
+                            <p><i>Buat data akun user baru.</i></p>
                         </div>
                         <div class="card-body">
                             <form method="post" action="{{ route('karyawan.store') }}" autocomplete="off">
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Nama Karyawan</label>
+                                    <label for="name" class="form-label">Nama User</label>
                                     <input type="text" class="form-control" name="name" id="name" placeholder="Masukkan nama karyawan..." autocomplete="off">
                                     @error('name')
                                         <div class="text-danger mt-2">{{ $message }}</div>
@@ -23,7 +23,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email Karyawan</label>
+                                    <label for="email" class="form-label">Email User</label>
                                     <input type="email" class="form-control" name="email" id="email" placeholder="Masukkan email karyawan..." autocomplete="off">
                                     @error('email')
                                         <div class="text-danger mt-2">{{ $message }}</div>
@@ -39,13 +39,13 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="role" class="form-label">Role Karyawan</label>
+                                    <label for="role" class="form-label">Role User</label>
                                     <select class="form-control" id="role" name="role">
                                         <option value="">Pilih</option>
                                         <option value="customer-service">Customer Service</option>
                                         <option value="agent">Agent</option>
                                     </select>
-                                    <p><i>*Role karyawan menentukan jenis pekerjaan dan fitur yang berbeda di dalam aplikasi</i></p>
+                                    <p><i>*Role user menentukan jenis pekerjaan dan fitur yang berbeda di dalam aplikasi</i></p>
                                     @error('role')
                                         <div class="text-danger mt-2">{{ $message }}</div>
                                     @enderror
@@ -60,7 +60,7 @@
                                 </div>
 
                                 <div class="mb-3 clearfix">
-                                    <label for="status" class="form-label">Status Akun Karyawan</label>
+                                    <label for="status" class="form-label">Status Akun User</label>
                                     <select class="form-control" name="status">
                                         <option value="">Pilih</option>
                                         <option value="1">Active</option>
@@ -72,7 +72,7 @@
                                 </div>
 
 
-                                <button type="submit" class="btn btn-primary w-md">Buat Akun Karyawan</button>
+                                <button type="submit" class="btn btn-primary w-md">Buat Akun User</button>
                             </form>
                         </div>
                     </div>

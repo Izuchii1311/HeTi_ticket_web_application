@@ -28,7 +28,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title mb-3">Data Karyawan</h4>
+                            <h4 class="card-title mb-3">Data Users</h4>
 
                             <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
                                 <thead>
